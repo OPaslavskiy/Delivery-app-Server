@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\banki\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add cross-evn
+  C:\Program Files\nodejs\node.exe C:\Users\banki\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add cros-evn
 
 PATH: 
   C:\Users\banki\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\banki\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\banki\AppData\Local\Microsoft\WindowsApps;C:\Users\banki\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\banki\AppData\Local\GitHubDesktop\bin;C:\Users\banki\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/cross-evn: Not found
+  Error: https://registry.yarnpkg.com/cros-evn: Not found
       at params.callback [as _callback] (C:\Users\banki\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66145:18)
       at self.callback (C:\Users\banki\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140890:22)
       at Request.emit (node:events:513:28)
@@ -30,14 +30,15 @@ npm manifest:
   {
     "name": "delivery-app-server",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "private": true,
     "engines": {
       "node": ">=14.20.1"
     },
     "scripts": {
       "start": "cross-env NODE_ENV=production node ./server.js",
-      "start:dev": "cross-env NODE_ENV=development nodemon ./server.js"
+      "start:dev": "cross-env NODE_ENV=development nodemon ./server.js",
+      "lint": "eslint **/*.js",
+      "lint:fix": "eslint --fix **/*.js"
     },
     "author": "",
     "license": "ISC",
