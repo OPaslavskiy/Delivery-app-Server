@@ -1,7 +1,7 @@
 {
   "name": "delivery-app-server",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
   "engines": {
     "node": ">=14.20.1"
   },
