@@ -34,6 +34,9 @@ const orderItemSchema = new Schema({
     type: Number,
     required: true,
   },
+  _id: {
+    type: String,
+  },
 });
 
 const orderSchema = new Schema(
