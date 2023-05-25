@@ -11,7 +11,6 @@ const orderSchemAdd = Joi.object({
         // _id: Joi.string().required(),
         titel: Joi.string().required(),
         price: Joi.number().required(),
-        image: Joi.string().uri().required(),
         quantity: Joi.number().required(),
       })
     )

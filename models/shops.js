@@ -26,16 +26,8 @@ const orderItemSchema = new Schema({
     type: Number,
     required: true,
   },
-  image: {
-    type: String,
-    required: true,
-  },
   quantity: {
     type: Number,
-    required: true,
-  },
-  _id: {
-    type: Schema.Types.ObjectId,
     required: true,
   },
 });
