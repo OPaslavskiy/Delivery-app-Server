@@ -17,23 +17,6 @@ const shopsSchema = new Schema({
   },
 });
 
-//   {
-//     "name": "OLEH PASLAVSKYI",
-//     "email": "bankir.op@gmail.com",
-//     "phone": "0673740674",
-//     "address": "Петлюри, 207",
-//     "order": [
-//       {
-//         "_id": "646cf05ab85b8abc5cec3de1",
-//         "titel": "Small Shaurma",
-//         "price": 125,
-//         "image": "https://i.imgur.com/NCMH80R.jpg",
-//         "quantity": 1
-//       }
-//     ],
-//     "totalPrice": 125
-// }
-
 const orderItemSchema = new Schema({
   titel: {
     type: String,

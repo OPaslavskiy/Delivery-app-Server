@@ -2,7 +2,7 @@ const Joi = require("joi");
 
 const orderSchemAdd = Joi.object({
   name: Joi.string().required(),
-  email: Joi.string().email().required(),
+  email: Joi.string().required(),
   phone: Joi.string().required(),
   address: Joi.string().required(),
   order: Joi.array()
