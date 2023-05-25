@@ -1,7 +1,5 @@
 const { Schema, model } = require("mongoose");
 
-// const hendleMongooseError = require("../helpers/handleMongooseError");
-
 const shopsSchema = new Schema({
   title: {
     type: String,
