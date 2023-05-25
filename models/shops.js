@@ -35,7 +35,8 @@ const orderItemSchema = new Schema({
     required: true,
   },
   _id: {
-    type: String,
+    type: Schema.Types.ObjectId,
+    required: true,
   },
 });
 
