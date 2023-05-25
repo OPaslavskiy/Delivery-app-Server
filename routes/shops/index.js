@@ -3,6 +3,7 @@ const fainaRouter = require("./faina_pizza-router");
 const mcDuckRouter = require("./mc_duck-router");
 const sushiAbwRouter = require("./sushi_abw-router");
 const theShaurmaRouter = require("./the_shaurma-router");
+const addOrder = require("./order-router");
 
 module.exports = {
   elariRouter,
@@ -10,4 +11,5 @@ module.exports = {
   mcDuckRouter,
   sushiAbwRouter,
   theShaurmaRouter,
+  addOrder,
 };

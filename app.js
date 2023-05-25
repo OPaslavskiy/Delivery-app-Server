@@ -10,6 +10,7 @@ const {
   mcDuckRouter,
   sushiAbwRouter,
   theShaurmaRouter,
+  addOrder,
 } = require("./routes/shops");
 
 const app = express();
@@ -25,6 +26,7 @@ app.use("/api", fainaRouter);
 app.use("/api", mcDuckRouter);
 app.use("/api", sushiAbwRouter);
 app.use("/api", theShaurmaRouter);
+app.use("/api", addOrder);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });

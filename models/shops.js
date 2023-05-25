@@ -1,5 +1,4 @@
 const { Schema, model } = require("mongoose");
-// const Joi = require("joi");
 
 // const hendleMongooseError = require("../helpers/handleMongooseError");
 
@@ -12,25 +11,78 @@ const shopsSchema = new Schema({
     type: Number,
     required: true,
   },
+  image: {
+    type: String,
+    required: true,
+  },
 });
 
-// contactSchema.post("save", hendleMongooseError);
+//   {
+//     "name": "OLEH PASLAVSKYI",
+//     "email": "bankir.op@gmail.com",
+//     "phone": "0673740674",
+//     "address": "Петлюри, 207",
+//     "order": [
+//       {
+//         "_id": "646cf05ab85b8abc5cec3de1",
+//         "titel": "Small Shaurma",
+//         "price": 125,
+//         "image": "https://i.imgur.com/NCMH80R.jpg",
+//         "quantity": 1
+//       }
+//     ],
+//     "totalPrice": 125
+// }
 
-// const contactAddSchema = Joi.object({
-//   name: Joi.string().required(),
-//   email: Joi.string()
-//     .required()
-//     .pattern(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/),
-//   phone: Joi.string()
-//     .required()
-//     .pattern(/^[\d()+\- ]+$/),
-//   favorite: Joi.boolean(),
-// });
+const orderItemSchema = new Schema({
+  titel: {
+    type: String,
+    required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+  image: {
+    type: String,
+    required: true,
+  },
+  quantity: {
+    type: Number,
+    required: true,
+  },
+});
 
-// const updateFavoriteSchema = Joi.object({
-//   favorite: Joi.boolean().required(),
-// });
+const orderSchema = new Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      match: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+      required: true,
+    },
+    phone: {
+      type: String,
+      match: /^[\d()+\- ]+$/,
+      required: true,
+    },
+    address: {
+      type: String,
+      required: true,
+    },
+    totalPrice: {
+      type: Number,
+      required: true,
+    },
+    order: [orderItemSchema],
+  },
+  { versionKey: false, timestamps: true }
+);
 
+const Order = model("order", orderSchema);
 const Elari = model("elari_caffe-good", shopsSchema);
 const Faina = model("faina_pizza-good", shopsSchema);
 const McDuck = model("mc_duck-good", shopsSchema);
@@ -43,4 +95,5 @@ module.exports = {
   McDuck,
   SushiAbw,
   TheShaurma,
+  Order,
 };
