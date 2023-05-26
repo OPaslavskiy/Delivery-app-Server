@@ -28,4 +28,6 @@ The server is deployed on render.com at: [https://delivery-app-server.onrender.c
 
 ### To view the website and access all its features, simply follow the link to the live page: [https://opaslavskiy.github.io/delivery-app-/]
 
+(If you visit the website for the first time, there may be a long loading time due to the server being hosted on a free hosting service. Please wait a few seconds, and everything will be fine. Thank you for your understanding.)
+
 Additional information: The project was created in less than 2.5 days, which was within the given deadline of three days.
